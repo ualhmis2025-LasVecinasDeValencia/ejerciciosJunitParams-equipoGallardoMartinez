@@ -15,6 +15,13 @@ public class Ejercicio2Test {
 	@CsvSource({"'', contraseña, false",
 				"nombreUsuario, contraseña, false",
 				"user, pass, true",
+				"usuario, '', false",
+				"'', '', false", 
+				"usuariodemasiadolargoquetienemasdetreintacaracteres, contraseñanormal, false",
+				"usuarionormal, contraseñademasiadolargaquetienemasdetreintacaracteres, false",
+				"usuario, contraseña, false",
+				"user, contraseña, false",
+				"usuario, pass, false",
 				})
 	
 	void testLogin(String nombreUsuario, String constraseña, Boolean resultado) {
