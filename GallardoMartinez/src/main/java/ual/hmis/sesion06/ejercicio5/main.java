@@ -5,17 +5,17 @@ import java.util.List;
 
 public class main {
 
-	public static void main(String[] args) throws IOException {
-
-		ContadorDePalabras palabras = new ContadorDePalabras(); 
-		
-		List<String> lista = palabras.leerPalabras(); 
-		
-		for(String palabra : lista) {
-			
-			System.out.println(palabra);	
-		}
-			
-	}
+//	public static void main(String[] args) throws IOException {
+//
+//		ContadorDePalabras palabras = new ContadorDePalabras(); 
+//		
+//		List<String> lista = palabras.leerPalabras(); 
+//		
+//		for(String palabra : lista) {
+//			
+//			System.out.println(palabra);	
+//		}
+//			
+//	}
 
 }
