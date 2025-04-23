@@ -19,6 +19,7 @@ public class MezclaLinealTest {
             Arguments.of(List.of(1, 3, 5), List.of(2, 4, 6), List.of(1, 2, 3, 4, 5, 6)),
             Arguments.of(List.of(1, 2), List.of(3, 4), List.of(1, 2, 3, 4)),
             Arguments.of(List.of(5, 6), List.of(1, 2), List.of(1, 2, 5, 6)),
+            Arguments.of(List.of(5, 6), List.of(5,6), List.of(5,6)),
             Arguments.of(List.of(), List.of(1, 2, 3), List.of(1, 2, 3)),
             Arguments.of(List.of(1, 2, 3), List.of(), List.of(1, 2, 3)),
             Arguments.of(List.of(), List.of(), List.of())
@@ -28,7 +29,8 @@ public class MezclaLinealTest {
     @ParameterizedTest
     @MethodSource("datosDePrueba")
     public void testMezclaConEnteros(List<Integer> l1, List<Integer> l2, List<Integer> esperado) {
-        List<Integer> resultado = MezclaLineal.mezcla(l1, l2);
+    	MezclaLineal mezclaLineal = new MezclaLineal();
+        List<Integer> resultado = mezclaLineal.mezcla(l1, l2);
         assertEquals(esperado, resultado);
     }
 }

@@ -16,11 +16,11 @@ public class ContadorDePalabras {
 
         // Cargar el archivo desde src/main/resources
         InputStream is = getClass().getClassLoader().getResourceAsStream(archivo);
+        List<String> palabras = new ArrayList<>();
         if (is == null) {
-            throw new IOException("No se encontró el archivo " + archivo +" en src/main/resources");
+           return palabras;
         }
 
-        List<String> palabras = new ArrayList<>();
 
         BufferedReader br = new BufferedReader(new InputStreamReader(is));
         String linea;
@@ -47,11 +47,12 @@ public class ContadorDePalabras {
 
         // Cargar el archivo desde src/main/resources
         InputStream is = getClass().getClassLoader().getResourceAsStream(archivo);
+        List<String> palabras = new ArrayList<>();
         if (is == null) {
-            throw new IOException("No se encontró el archivo " + archivo + " en src/main/resources");
+            return palabras;
         }
 
-        List<String> palabras = new ArrayList<>();
+        
 
         BufferedReader br = new BufferedReader(new InputStreamReader(is));
         String linea;

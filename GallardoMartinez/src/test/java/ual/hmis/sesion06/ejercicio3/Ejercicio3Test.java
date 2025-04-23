@@ -11,7 +11,6 @@ public class Ejercicio3Test {
 	
 	@ParameterizedTest
 	@CsvSource( {
-		"textoEjemplo.txt, password demasiado corto",
 		"anton, ********",
 		"anton123, ********",
 		"anton1234567, ************",

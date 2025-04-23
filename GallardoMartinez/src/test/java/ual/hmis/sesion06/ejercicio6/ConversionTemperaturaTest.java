@@ -37,12 +37,7 @@ public class ConversionTemperaturaTest {
 		double result = converter.convertTemperature(temperature, fromUnit, toUnit);
 		double resultEsp;
 		
-		if(esp=="NaN") {
-			resultEsp = Double.NaN;
-		}
-		else {
-			resultEsp = Double.valueOf(esp);
-		}
+		resultEsp = Double.valueOf(esp);
 
 		// Comparación con un margen de error por decimales
 		assertEquals(resultEsp, result, 0.01);

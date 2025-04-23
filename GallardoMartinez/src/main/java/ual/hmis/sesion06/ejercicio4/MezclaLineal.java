@@ -5,7 +5,7 @@ import java.util.List;
 
 public class MezclaLineal {
 	
-	public static <T extends Comparable<T>> List<T> mezcla(List<T> l1, List<T> l2){
+	public  <T extends Comparable<T>> List<T> mezcla(List<T> l1, List<T> l2){
 		List<T> x = new ArrayList<T>();
 		boolean pr=true ,seg=true;
 		int primero=0 , segundo = 0;

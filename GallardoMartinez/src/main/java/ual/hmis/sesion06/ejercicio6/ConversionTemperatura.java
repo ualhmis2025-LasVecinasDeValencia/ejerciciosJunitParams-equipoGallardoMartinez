@@ -12,7 +12,6 @@ public class ConversionTemperatura {
 			case "Kelvin":
 				return temperature + 273.15;
 			}
-			break;
 		case "Fahrenheit":
 			switch(toUnit) {
 			case "Celsius":
@@ -20,7 +19,6 @@ public class ConversionTemperatura {
 			case "Kelvin":
 				return ((temperature -32)*5/9)+273.15;
 			}
-			break;
 		case "Kelvin":
 			switch(toUnit) {
 			case "Celsius":
