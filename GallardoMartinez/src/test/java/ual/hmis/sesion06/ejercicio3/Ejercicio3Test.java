@@ -2,7 +2,9 @@ package ual.hmis.sesion06.ejercicio3;
 
 import static org.junit.Assert.assertEquals;
 
+
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
 public class Ejercicio3Test {
@@ -10,16 +12,9 @@ public class Ejercicio3Test {
 	
 	
 	@ParameterizedTest
-	@CsvSource( {
-		"anton, ********",
-		"anton123, ********",
-		"anton1234567, ************",
-		"a7B9kLm2QwXzP4rT6uVjYc3NdEeHgFiKoLpMtZxW, ************", 
-		"a7B9kLm2QwXzP4rT6uVjYc3NdEeHgFiKoLpMtZxW1, password demasiado largo",
-		"'', password demasiado corto"
-		
-	})
 	
+	@CsvFileSource(files = "src/test/java/ual/hmis/sesion06/ejercicio3/datos.csv")
+
 	
 	
 	void enmascararContraseña(String contraseña, String cadenaDeSalida) {

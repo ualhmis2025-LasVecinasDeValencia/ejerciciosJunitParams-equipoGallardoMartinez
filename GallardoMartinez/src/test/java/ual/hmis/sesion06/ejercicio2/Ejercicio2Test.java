@@ -14,14 +14,21 @@ public class Ejercicio2Test {
 	@ParameterizedTest
 	@CsvSource({"'', contraseña, false",
 				"nombreUsuario, contraseña, false",
-				"user, pass, true",
+				"user, pass, false",
 				"usuario, '', false",
 				"'', '', false", 
-				"usuariodemasiadolargoquetienemasdetreintacaracteres, contraseñanormal, false",
-				"usuarionormal, contraseñademasiadolargaquetienemasdetreintacaracteres, false",
+				"usuariodemasiadolargoquetienem, contraseñanormal, false",
+				"usuarionormal, usuariodemasiadolargoquetienem, false",
 				"usuario, contraseña, false",
 				"user, contraseña, false",
 				"usuario, pass, false",
+				"usuario, contrasenasinmayusculas, false",
+				"usuario, contraseñaSinDigitos, false",
+				"usuario, CONTRASENASINMINUSCULAS, false",
+				"usuario, Contrasena12, true", 
+				"usuario, @@@@@@@@@@@, false",
+				"user, Contrasena12, false",
+				"usuario, Contrasena1, false"
 				})
 	
 	void testLogin(String nombreUsuario, String constraseña, Boolean resultado) {
